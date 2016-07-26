@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A10304A17114B9100333366 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A10304917114B9100333366 /* UIKit.framework */; };
-		2A10304C17114B9100333366 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A10304B17114B9100333366 /* Foundation.framework */; };
 		2A10305417114B9100333366 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A10305217114B9100333366 /* InfoPlist.strings */; };
 		2A10305617114B9100333366 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A10305517114B9100333366 /* main.m */; };
 		2A10305A17114B9100333366 /* KIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A10305917114B9100333366 /* KIAppDelegate.m */; };
@@ -20,15 +18,12 @@
 		2A10306F17114BC300333366 /* KIImagePager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A10306E17114BC300333366 /* KIImagePager.m */; };
 		2A103098171168C100333366 /* KICamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A103096171168C100333366 /* KICamera.png */; };
 		2A103099171168C100333366 /* KICamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A103097171168C100333366 /* KICamera@2x.png */; };
-		2A10309B171169B300333366 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A10309A171169B300333366 /* QuartzCore.framework */; };
-		2A10309D171169C100333366 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A10309C171169C100333366 /* CoreGraphics.framework */; };
 		2A70F38617917A9300DA8F8F /* KICamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A103096171168C100333366 /* KICamera.png */; };
 		2A70F38717917A9800DA8F8F /* KICamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A103097171168C100333366 /* KICamera@2x.png */; };
-		2AE758D01791721B00EC65B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A10304917114B9100333366 /* UIKit.framework */; };
-		2AE758D11791721B00EC65B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A10304B17114B9100333366 /* Foundation.framework */; };
 		2AE758D71791721B00EC65B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AE758D51791721B00EC65B5 /* InfoPlist.strings */; };
 		2AE758DA1791721B00EC65B5 /* KIImagePagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE758D91791721B00EC65B5 /* KIImagePagerTests.m */; };
 		2AE758E1179172B100EC65B5 /* KIImagePager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A10306E17114BC300333366 /* KIImagePager.m */; };
+		2FF62A0272B97E1688F8500B /* libPods-KIImagePager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D40B3C86788B3FB51E51C4 /* libPods-KIImagePager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00EEF5751E71FC771C12ED20 /* Pods-KIImagePager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIImagePager.release.xcconfig"; path = "Pods/Target Support Files/Pods-KIImagePager/Pods-KIImagePager.release.xcconfig"; sourceTree = "<group>"; };
+		18D40B3C86788B3FB51E51C4 /* libPods-KIImagePager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KIImagePager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAD510D3D117CCE246AF679 /* Pods-KIImagePager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIImagePager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KIImagePager/Pods-KIImagePager.debug.xcconfig"; sourceTree = "<group>"; };
 		2A10304617114B9100333366 /* KIImagePager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KIImagePager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A10304917114B9100333366 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2A10304B17114B9100333366 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A10305117114B9100333366 /* KIImagePager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KIImagePager-Info.plist"; sourceTree = "<group>"; };
 		2A10305317114B9100333366 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A10305517114B9100333366 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,8 +57,6 @@
 		2A10306E17114BC300333366 /* KIImagePager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIImagePager.m; sourceTree = "<group>"; };
 		2A103096171168C100333366 /* KICamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KICamera.png; sourceTree = "<group>"; };
 		2A103097171168C100333366 /* KICamera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KICamera@2x.png"; sourceTree = "<group>"; };
-		2A10309A171169B300333366 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		2A10309C171169C100333366 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2AE758CD1791721B00EC65B5 /* KIImagePagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KIImagePagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE758D41791721B00EC65B5 /* KIImagePagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KIImagePagerTests-Info.plist"; sourceTree = "<group>"; };
 		2AE758D61791721B00EC65B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -75,10 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A10309D171169C100333366 /* CoreGraphics.framework in Frameworks */,
-				2A10309B171169B300333366 /* QuartzCore.framework in Frameworks */,
-				2A10304A17114B9100333366 /* UIKit.framework in Frameworks */,
-				2A10304C17114B9100333366 /* Foundation.framework in Frameworks */,
+				2FF62A0272B97E1688F8500B /* libPods-KIImagePager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,8 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE758D01791721B00EC65B5 /* UIKit.framework in Frameworks */,
-				2AE758D11791721B00EC65B5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +90,7 @@
 				2AE758D21791721B00EC65B5 /* KIImagePagerTests */,
 				2A10304817114B9100333366 /* Frameworks */,
 				2A10304717114B9100333366 /* Products */,
+				C0CAF4454F2379F11B2FB317 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,10 +106,7 @@
 		2A10304817114B9100333366 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A10309C171169C100333366 /* CoreGraphics.framework */,
-				2A10309A171169B300333366 /* QuartzCore.framework */,
-				2A10304917114B9100333366 /* UIKit.framework */,
-				2A10304B17114B9100333366 /* Foundation.framework */,
+				18D40B3C86788B3FB51E51C4 /* libPods-KIImagePager.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,6 +169,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C0CAF4454F2379F11B2FB317 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD510D3D117CCE246AF679 /* Pods-KIImagePager.debug.xcconfig */,
+				00EEF5751E71FC771C12ED20 /* Pods-KIImagePager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A10306917114B9100333366 /* Build configuration list for PBXNativeTarget "KIImagePager" */;
 			buildPhases = (
+				657DCD73BB9EDD336241794D /* [CP] Check Pods Manifest.lock */,
 				2A10304217114B9100333366 /* Sources */,
 				2A10304317114B9100333366 /* Frameworks */,
 				2A10304417114B9100333366 /* Resources */,
+				F56017D1234D24EBEEDF1366 /* [CP] Embed Pods Frameworks */,
+				BFB9D9E15B75129791226BE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,6 +289,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		657DCD73BB9EDD336241794D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFB9D9E15B75129791226BE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIImagePager/Pods-KIImagePager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F56017D1234D24EBEEDF1366 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIImagePager/Pods-KIImagePager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -410,10 +454,12 @@
 		};
 		2A10306A17114B9100333366 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FAD510D3D117CCE246AF679 /* Pods-KIImagePager.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KIImagePager/KIImagePager-Prefix.pch";
 				INFOPLIST_FILE = "KIImagePager/KIImagePager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -421,10 +467,12 @@
 		};
 		2A10306B17114B9100333366 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00EEF5751E71FC771C12ED20 /* Pods-KIImagePager.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KIImagePager/KIImagePager-Prefix.pch";
 				INFOPLIST_FILE = "KIImagePager/KIImagePager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

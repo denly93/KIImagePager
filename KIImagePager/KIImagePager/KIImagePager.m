@@ -11,6 +11,7 @@
 #define kOverlayHeight      15
 
 #import "KIImagePager.h"
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @interface KIImagePagerDefaultImageSource : NSObject <KIImagePagerImageSource>
 @end
@@ -195,9 +196,7 @@
             [imageView setContentMode:[_dataSource contentModeForImage:i inPager:self]];
             [imageView setTag:i];
             [imageView setClipsToBounds:YES];
-            if ([_dataSource respondsToSelector:@selector(placeHolderImageForImagePager:)]) {
-                [imageView setImage:[_dataSource placeHolderImageForImagePager:self]];
-            }
+
             if([_dataSource respondsToSelector:@selector(contentModeForPlaceHolder:)]) {
                 [imageView setContentMode:[_dataSource contentModeForPlaceHolder:self]];
             }
@@ -207,33 +206,32 @@
                 [imageView setImage:(UIImage *)[aImageUrls objectAtIndex:i]];
             } else if([[aImageUrls objectAtIndex:i] isKindOfClass:[NSString class]] ||
                       [[aImageUrls objectAtIndex:i] isKindOfClass:[NSURL class]]) {
-                // Instantiate and show Actvity Indicator
-                UIActivityIndicatorView *activityIndicator = [UIActivityIndicatorView new];
-                activityIndicator.center = (CGPoint){_scrollView.frame.size.width/2, _scrollView.frame.size.height/2};
-                activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
-                [imageView addSubview:activityIndicator];
-                [activityIndicator startAnimating];
-                [_activityIndicators setObject:activityIndicator forKey:[NSString stringWithFormat:@"%d", i]];
 
                 // Asynchronously retrieve image
                 NSURL * imageUrl  = [[aImageUrls objectAtIndex:i] isKindOfClass:[NSURL class]] ? [aImageUrls objectAtIndex:i] : [NSURL URLWithString:(NSString *)[aImageUrls objectAtIndex:i]];
 
-                //image source is responsible for image retreiving/caching, etc...
-                [self.imageSource imageWithUrl:imageUrl
-                                    completion:^(UIImage *image, NSError *error)
-                 {
-                     if(!error) [imageView setImage:image];//should we handle error?
-                     else [imageView setImage:nil];
+                if ([_dataSource respondsToSelector:@selector(placeHolderImageForImagePager:)]) {
+                    [imageView sd_setImageWithURL:imageUrl placeholderImage:[_dataSource placeHolderImageForImagePager:self]];
+                } else {
+                    UIActivityIndicatorView *activityIndicator = [UIActivityIndicatorView new];
+                    activityIndicator.center = (CGPoint){_scrollView.frame.size.width/2, _scrollView.frame.size.height/2};
+                    activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+                    [imageView addSubview:activityIndicator];
+                    [activityIndicator startAnimating];
+                    [_activityIndicators setObject:activityIndicator forKey:[NSString stringWithFormat:@"%d", i]];
+                    [imageView sd_setImageWithURL:imageUrl
+                        placeholderImage:nil
+                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                            [imageView setContentMode:[_dataSource contentModeForImage:i inPager:self]];
 
-                     [imageView setContentMode:[_dataSource contentModeForImage:i inPager:self]];
-
-                     // Stop and Remove Activity Indicator
-                     UIActivityIndicatorView *indicatorView = (UIActivityIndicatorView *)[_activityIndicators objectForKey:[NSString stringWithFormat:@"%d", i]];
-                     if (indicatorView) {
-                         [indicatorView stopAnimating];
-                         [_activityIndicators removeObjectForKey:[NSString stringWithFormat:@"%d", i]];
-                     }
-                 }];
+                            // Stop and Remove Activity Indicator
+                            UIActivityIndicatorView *indicatorView = (UIActivityIndicatorView *)[_activityIndicators objectForKey:[NSString stringWithFormat:@"%d", i]];
+                            if (indicatorView) {
+                                [indicatorView stopAnimating];
+                                [_activityIndicators removeObjectForKey:[NSString stringWithFormat:@"%d", i]];
+                            }
+                        }];
+                }
             }
 
             // Add GestureRecognizer to ImageView
